@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data-service.service';
-import { ModalInfoPage } from '../modal/modal-info/modal-info.page';
+import { DataService } from '../../data-service.service';
+import { ModalInfoPage } from '../../modal/modal-info/modal-info.page';
 import { ModalController } from '@ionic/angular';
  
 @Component({

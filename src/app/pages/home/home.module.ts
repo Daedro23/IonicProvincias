@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
-import { PipesModule } from '../pipes/pipes.module';
+import { PipesModule } from '../../pipes/pipes.module';
 
 import { HomePageRoutingModule } from './home-routing.module';
 
