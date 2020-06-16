@@ -10,7 +10,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },
+  }
+  // {
+  //   path: 'modal-info',
+  //   loadChildren: () => import('./modal/modal-info/modal-info.module').then( m => m.ModalInfoPageModule)
+  // }
 ];
 
 @NgModule({
