@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../data-service.service';
 import { ModalInfoPage } from '../../modal/modal-info/modal-info.page';
 import { ModalController } from '@ionic/angular';
- 
+import { AuthService } from '../../services/auth.service';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -14,10 +14,14 @@ export class HomePage implements OnInit {
   nombreProvincias: any[];
   provincia = '';
 
-  constructor(private dataService: DataService, private modalController: ModalController) {}
+  constructor(private dataService: DataService, private modalController: ModalController, private authService: AuthService) {}
 
   ngOnInit () {
     this.obtenerLista()
+  }
+
+  logout() {
+    this.authService.usuarioLogeado();
   }
 
   obtenerLista() {
@@ -29,7 +33,6 @@ export class HomePage implements OnInit {
 
   getProvincias(data){
     this.nombreProvincias = data.provincias;
-    console.log(this);
   }
 
   buscarProvincia(event) {
